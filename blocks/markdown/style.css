@@ -1,0 +1,88 @@
+.wp-block-markdown-importer-blocks-markdown.markdown-importer-blocks {
+	box-sizing: border-box;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-rendered-content > :first-child {
+	margin-top: 0;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-rendered-content > :last-child {
+	margin-bottom: 0;
+}
+
+.wp-block-markdown-importer-blocks-markdown pre {
+	overflow-x: auto;
+	padding: 1em;
+	border-radius: 4px;
+	background: rgba(127, 127, 127, 0.12);
+}
+
+.wp-block-markdown-importer-blocks-markdown code {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	font-size: 0.95em;
+}
+
+.wp-block-markdown-importer-blocks-markdown table {
+	width: 100%;
+	border-collapse: collapse;
+	margin: 1em 0;
+}
+
+.wp-block-markdown-importer-blocks-markdown th,
+.wp-block-markdown-importer-blocks-markdown td {
+	border: 1px solid currentColor;
+	padding: 0.45em 0.65em;
+	vertical-align: top;
+}
+
+.wp-block-markdown-importer-blocks-markdown blockquote {
+	border-left: 4px solid currentColor;
+	margin-left: 0;
+	padding-left: 1em;
+	opacity: 0.9;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-caption {
+	font-size: 0.875em;
+	margin-top: 0.75em;
+	opacity: 0.8;
+	text-align: center;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-source-details {
+	margin-top: 1em;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-source-details summary {
+	cursor: pointer;
+	font-weight: 600;
+}
+
+/* Companion plugin fallbacks. These keep Markdown output readable when the
+   companion renderer JavaScript is absent, and disappear once rendering starts. */
+.wp-block-markdown-importer-blocks-markdown .mib-math-compatible-block,
+.wp-block-markdown-importer-blocks-markdown .mib-math-compatible-inline {
+	margin: 1em 0;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-math-compatible-inline {
+	display: inline;
+	margin: 0;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-math-compatible-inline .mcb-math-render {
+	display: inline;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mib-math-fallback {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+}
+
+.wp-block-markdown-importer-blocks-markdown [data-mcb-math-status="rendering"] > .mib-math-fallback,
+.wp-block-markdown-importer-blocks-markdown [data-mcb-math-status="rendered"] > .mib-math-fallback {
+	display: none;
+}
+
+.wp-block-markdown-importer-blocks-markdown .mcb-code-block pre.ccb-code-pre {
+	margin: 0;
+}

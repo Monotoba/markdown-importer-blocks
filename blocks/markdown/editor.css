@@ -1,0 +1,129 @@
+.wp-block-markdown-importer-blocks-markdown.mib-editor-block {
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	padding: 16px;
+	background: #fff;
+}
+
+.mib-editor-header {
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+	gap: 12px;
+	margin-bottom: 12px;
+}
+
+.mib-rendering {
+	display: inline-flex;
+	align-items: center;
+	gap: 6px;
+	font-size: 12px;
+	color: #646970;
+}
+
+.mib-editor-main {
+	display: grid;
+	grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+	gap: 16px;
+}
+
+.mib-editor-column-full {
+	grid-column: 1 / -1;
+}
+
+.mib-editor-column textarea {
+	font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, "Liberation Mono", monospace;
+	font-size: 13px;
+}
+
+.mib-preview-column {
+	border-left: 1px solid #dcdcde;
+	padding-left: 16px;
+}
+
+.mib-preview-title {
+	font-weight: 600;
+	margin-bottom: 8px;
+}
+
+.mib-preview {
+	min-height: 12rem;
+	max-height: 38rem;
+	overflow: auto;
+	padding: 12px;
+	border: 1px solid #e0e0e0;
+	border-radius: 4px;
+	background: #fafafa;
+}
+
+.mib-preview > :first-child {
+	margin-top: 0;
+}
+
+.mib-preview > :last-child {
+	margin-bottom: 0;
+}
+
+.mib-preview pre {
+	overflow-x: auto;
+	padding: 1em;
+	background: rgba(127, 127, 127, 0.12);
+}
+
+.mib-preview table {
+	width: 100%;
+	border-collapse: collapse;
+}
+
+.mib-preview th,
+.mib-preview td {
+	border: 1px solid currentColor;
+	padding: 0.4em 0.55em;
+}
+
+.mib-editor-actions {
+	display: flex;
+	flex-wrap: wrap;
+	gap: 8px;
+	margin-top: 12px;
+}
+
+.mib-editor-source-panel {
+	margin: 12px 0;
+	padding: 12px;
+	border: 1px solid #dcdcde;
+	border-radius: 4px;
+	background: #f6f7f7;
+}
+
+.mib-help {
+	margin: 0 0 8px;
+	font-size: 12px;
+	color: #646970;
+}
+
+.mib-convert-button {
+	margin-top: 8px;
+}
+
+@media (max-width: 900px) {
+	.mib-editor-main {
+		grid-template-columns: 1fr;
+	}
+
+	.mib-preview-column {
+		border-left: 0;
+		border-top: 1px solid #dcdcde;
+		padding-left: 0;
+		padding-top: 16px;
+	}
+}
+
+.mib-preview .mib-math-compatible-inline {
+	display: inline;
+}
+
+.mib-preview [data-mcb-math-status="rendering"] > .mib-math-fallback,
+.mib-preview [data-mcb-math-status="rendered"] > .mib-math-fallback {
+	display: none;
+}

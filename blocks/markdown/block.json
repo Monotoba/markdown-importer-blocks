@@ -1,0 +1,94 @@
+{
+  "apiVersion": 3,
+  "name": "markdown-importer-blocks/markdown",
+  "version": "1.2.0",
+  "title": "Markdown Importer",
+  "category": "widgets",
+  "icon": "media-document",
+  "description": "Paste, upload, or fetch Markdown, then render or convert it with Mermaid, Math, and Code Content Blocks compatibility.",
+  "keywords": [
+    "markdown",
+    "import",
+    "html",
+    "md"
+  ],
+  "textdomain": "markdown-importer-blocks",
+  "attributes": {
+    "markdown": {
+      "type": "string",
+      "default": "# Markdown Importer\n\nPaste Markdown here, upload a `.md` file, or fetch Markdown from a URL.\n\n- Supports headings\n- Lists\n- Links\n- Images\n- Tables\n- Code fences via Code Content Blocks when active\n- Mermaid fences via Mermaid Content Blocks when active\n- TeX/LaTeX, AsciiMath, and MathML via Math Content Blocks when active\n\n```python\ndef hello(name: str) -> str:\n    return f\"Hello, {name}\"\n```\n\n```mermaid\nflowchart TD\n    A[Markdown] --> B[Mermaid Diagram]\n```\n\nInline math: $a^2 + b^2 = c^2$\n\n$$\n\\frac{-b \\pm \\sqrt{b^2 - 4ac}}{2a}\n$$"
+    },
+    "sourceType": {
+      "type": "string",
+      "default": "paste"
+    },
+    "sourceUrl": {
+      "type": "string",
+      "default": ""
+    },
+    "caption": {
+      "type": "string",
+      "default": ""
+    },
+    "showSource": {
+      "type": "boolean",
+      "default": false
+    },
+    "allowRawHtml": {
+      "type": "boolean",
+      "default": false
+    },
+    "openLinksNewTab": {
+      "type": "boolean",
+      "default": false
+    },
+    "preserveLineBreaks": {
+      "type": "boolean",
+      "default": false
+    },
+    "headingAnchors": {
+      "type": "boolean",
+      "default": false
+    },
+    "codeTheme": {
+      "type": "string",
+      "default": "system"
+    },
+    "codeShowLineNumbers": {
+      "type": "boolean",
+      "default": false
+    },
+    "codeWrapLines": {
+      "type": "boolean",
+      "default": false
+    },
+    "codeShowCopyButton": {
+      "type": "boolean",
+      "default": true
+    },
+    "mathEnableVariableColors": {
+      "type": "boolean",
+      "default": false
+    },
+    "mathVariableColors": {
+      "type": "string",
+      "default": "x = #d32f2f\ny = #1976d2"
+    }
+  },
+  "supports": {
+    "align": [
+      "wide",
+      "full"
+    ],
+    "anchor": true,
+    "className": true,
+    "html": false,
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "editorScript": "file:./editor.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}
