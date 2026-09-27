@@ -1,7 +1,7 @@
 # Markdown Importer Blocks
 
 [![Tests](https://github.com/Monotoba/markdown-importer-blocks/actions/workflows/test.yml/badge.svg)](https://github.com/Monotoba/markdown-importer-blocks/actions/workflows/test.yml)
-[![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
+[![License: BSD 2-Clause](https://img.shields.io/badge/License-BSD_2--Clause-blue.svg)](LICENSE)
 [![WordPress Plugin: Compatible with 7.0+](https://img.shields.io/badge/WordPress-7.0%2B-blue.svg)](https://wordpress.org)
 [![PHP: 8.0+](https://img.shields.io/badge/PHP-8.0%2B-blue.svg)](https://www.php.net)
 
@@ -52,7 +52,7 @@ The block is dynamic while in display mode: the saved Markdown remains editable,
 
 ## Installation
 
-1. Download the source from this repository and zip the `markdown-importer-blocks` folder. A tested installable release ZIP will be provided on the [releases page](https://github.com/Monotoba/markdown-importer-blocks/releases) when available.
+1. Download the installable ZIP from the [releases page](https://github.com/Monotoba/markdown-importer-blocks/releases).
 2. In WordPress, go to **Plugins → Add New → Upload Plugin**.
 3. Upload the ZIP and activate it.
 4. Open the block editor and insert **Markdown Importer**.
@@ -205,6 +205,10 @@ From the plugin folder:
 
 The smoke test checks PHP syntax, JavaScript syntax, `block.json`, and parser output for Markdown, code, Mermaid, and math compatibility fixtures.
 
+### Building a release ZIP
+
+Run `python3 tools/build-release.py` to produce `dist/markdown-importer-blocks-VERSION.zip` with one top-level `markdown-importer-blocks/` directory. `python3 tests/test-package.py` checks version alignment, contents, and reproducibility. A matching `vVERSION` tag triggers the release workflow to test and attach the ZIP to its GitHub release.
+
 ## Companion Plugin Integration Details
 
 All companion plugins are optional, but when installed and active, they provide seamless delegation:
@@ -234,4 +238,4 @@ Install any or all to extend Markdown Importer, or use Markdown Importer standal
 
 ## License
 
-MIT. See `LICENSE`.
+BSD 2-Clause. See [LICENSE](LICENSE) for the attribution and redistribution terms.

@@ -1,0 +1,45 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: shivammathur/setup-php@v2
+        with:
+          php-version: '8.0'
+          coverage: none
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Test and build the installable ZIP
+        run: |
+          python3 tools/build-release.py --check-tag "$GITHUB_REF_NAME" --output "dist/markdown-importer-blocks-${GITHUB_REF_NAME#v}.zip"
+          bash tests/smoke.sh
+          bash tests/test-doc-links.sh
+          bash tests/test-license.sh
+          python3 tests/test-package.py
+          unzip -t "dist/markdown-importer-blocks-${GITHUB_REF_NAME#v}.zip"
+
+      - name: Attach ZIP to GitHub release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          asset="dist/markdown-importer-blocks-${GITHUB_REF_NAME#v}.zip"
+          if gh release view "$GITHUB_REF_NAME" >/dev/null 2>&1; then
+            gh release upload "$GITHUB_REF_NAME" "$asset" --clobber
+          else
+            gh release create "$GITHUB_REF_NAME" "$asset" \
+              --verify-tag --title "Markdown Importer Blocks $GITHUB_REF_NAME" --generate-notes
+          fi

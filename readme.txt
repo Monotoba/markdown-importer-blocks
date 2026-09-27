@@ -5,8 +5,8 @@ Requires at least: 7.0
 Tested up to: 7.0
 Requires PHP: 8.0
 Stable tag: 1.2.0
-License: MIT
-License URI: https://opensource.org/license/mit/
+License: BSD-2-Clause
+License URI: https://opensource.org/license/bsd-2-clause
 
 Adds a Markdown Importer block that can paste Markdown, read a Markdown file, import a Markdown URL, render it as WordPress HTML, and cooperate with Mermaid, Math, and Code Content Blocks.
 

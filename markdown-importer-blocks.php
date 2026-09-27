@@ -5,8 +5,8 @@
  * Description: Adds a Markdown Importer block that can paste, upload, or fetch Markdown and delegate Mermaid, math, and code rendering to companion content block plugins when available.
  * Version:     1.2.0
  * Author:      Randall Morgan / ChatGPT
- * License:     MIT
- * License URI: https://opensource.org/license/mit/
+ * License:     BSD-2-Clause
+ * License URI: https://opensource.org/license/bsd-2-clause
  * Text Domain: markdown-importer-blocks
  * Requires at least: 7.0
  * Requires PHP: 8.0

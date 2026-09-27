@@ -30,3 +30,8 @@ jobs:
 
       - name: Validate repository links
         run: bash tests/test-doc-links.sh
+
+      - name: Validate license and release package
+        run: |
+          bash tests/test-license.sh
+          python3 tests/test-package.py
