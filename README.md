@@ -1,12 +1,13 @@
 # Markdown Importer Blocks
 
+[![Tests](https://github.com/Monotoba/markdown-importer-blocks/actions/workflows/test.yml/badge.svg)](https://github.com/Monotoba/markdown-importer-blocks/actions/workflows/test.yml)
 [![License: MIT](https://img.shields.io/badge/License-MIT-blue.svg)](LICENSE)
 [![WordPress Plugin: Compatible with 7.0+](https://img.shields.io/badge/WordPress-7.0%2B-blue.svg)](https://wordpress.org)
 [![PHP: 8.0+](https://img.shields.io/badge/PHP-8.0%2B-blue.svg)](https://www.php.net)
 
 A WordPress block plugin for importing and rendering Markdown content with optional delegation to specialized content plugins.
 
-**Core plugin of a cohesive system:** **Markdown Importer** + [Code Content Blocks](../../code-content-blocks#readme) + [Math Content Blocks](../../math-content-blocks#readme) + [Mermaid Content Blocks](../../mermaid-content-blocks#readme).
+**Core plugin of a cohesive system:** **Markdown Importer** + [Code Content Blocks](https://github.com/Monotoba/code-content-blocks) + [Math Content Blocks](https://github.com/Monotoba/math-content-blocks) + [Mermaid Content Blocks](https://github.com/Monotoba/Mermaid-WP-Block).
 
 ### Use Standalone or as a Cohesive Unit
 
@@ -17,9 +18,9 @@ A WordPress block plugin for importing and rendering Markdown content with optio
 
 **As a Cohesive System (Recommended):**
 Activate the companion plugins for specialized rendering:
-- **[Code Content Blocks](../../code-content-blocks#readme)** → Syntax-highlighted code with 80+ languages
-- **[Math Content Blocks](../../math-content-blocks#readme)** → Professional formulas (TeX, AsciiMath, MathML)
-- **[Mermaid Content Blocks](../../mermaid-content-blocks#readme)** → Diagrams, flowcharts, and sequence diagrams
+- **[Code Content Blocks](https://github.com/Monotoba/code-content-blocks)** → Syntax-highlighted code with 80+ languages
+- **[Math Content Blocks](https://github.com/Monotoba/math-content-blocks)** → Professional formulas (TeX, AsciiMath, MathML)
+- **[Mermaid Content Blocks](https://github.com/Monotoba/Mermaid-WP-Block)** → Diagrams, flowcharts, and sequence diagrams
 
 When companions are active, Markdown Importer automatically detects them and delegates specialized content for optimal rendering and live editing.
 
@@ -51,7 +52,7 @@ The block is dynamic while in display mode: the saved Markdown remains editable,
 
 ## Installation
 
-1. Zip the `markdown-importer-blocks` folder, or use the provided release ZIP.
+1. Download the source from this repository and zip the `markdown-importer-blocks` folder. A tested installable release ZIP will be provided on the [releases page](https://github.com/Monotoba/markdown-importer-blocks/releases) when available.
 2. In WordPress, go to **Plugins → Add New → Upload Plugin**.
 3. Upload the ZIP and activate it.
 4. Open the block editor and insert **Markdown Importer**.
@@ -225,18 +226,11 @@ All companion plugins are optional, but when installed and active, they provide 
 
 ## Related Plugins
 
-- **[Code Content Blocks](../../code-content-blocks#readme)** – Syntax-highlighted code blocks with 80+ languages
-- **[Math Content Blocks](../../math-content-blocks#readme)** – Render mathematical formulas (TeX, AsciiMath, MathML)
-- **[Mermaid Content Blocks](../../mermaid-content-blocks#readme)** – Create diagrams and flowcharts
+- **[Code Content Blocks](https://github.com/Monotoba/code-content-blocks)** – Syntax-highlighted code blocks with 80+ languages
+- **[Math Content Blocks](https://github.com/Monotoba/math-content-blocks)** – Render mathematical formulas (TeX, AsciiMath, MathML)
+- **[Mermaid Content Blocks](https://github.com/Monotoba/Mermaid-WP-Block)** – Create diagrams and flowcharts
 
 Install any or all to extend Markdown Importer, or use Markdown Importer standalone.
-
-## Suggested Git commit
-
-```bash
-git add wp-content/plugins/markdown-importer-blocks
-git commit -m "Refactor Markdown importer to delegate diagrams math and code"
-```
 
 ## License
 

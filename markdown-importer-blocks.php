@@ -1,7 +1,7 @@
 <?php
 /**
  * Plugin Name: Markdown Importer Blocks
- * Plugin URI:  https://example.invalid/markdown-importer-blocks
+ * Plugin URI:  https://github.com/Monotoba/markdown-importer-blocks
  * Description: Adds a Markdown Importer block that can paste, upload, or fetch Markdown and delegate Mermaid, math, and code rendering to companion content block plugins when available.
  * Version:     1.2.0
  * Author:      Randall Morgan / ChatGPT
